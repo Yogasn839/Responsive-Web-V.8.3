@@ -8,9 +8,9 @@ function loginGet(req, res) {
 
 function loginPost(req, res) {
 
-    const inputEmail = req.body.email;
+    const inputusername = req.body.username;
     const inputPassword = req.body.password;
-    const findDataIndex = usersData.findIndex((element) => element.email == inputEmail);
+    const findDataIndex = usersData.findIndex((element) => element.email == inputusername);
 
     if (findDataIndex == -1) {
         res.status(403).json({ message: 'Email is not registered' });
