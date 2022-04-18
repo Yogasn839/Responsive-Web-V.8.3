@@ -1,4 +1,4 @@
-   const usersData = require('../database/users.json')
+   const usersData = require('../database/users.json') //menampilkan file database user
 
    function users(req, res) {
        res.render('login');
@@ -13,7 +13,6 @@
        const result = usersData.find((item) => {
            return item.id == id;
        });
-
        if (!result) {
            return res.status(404).json({
                message: 'User not found'
